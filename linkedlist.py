@@ -68,13 +68,6 @@ class linkedlist:
                 prev=curr
                 curr = curr.next
 
-    def print_list(self):
-        curr = self.head
-        str1= ''
-        while curr:
-            str1 = str1 +  "[ " + str(curr.data) + " ] --> "
-            curr = curr.next
-        print str1
 
 
 l = linkedlist()
