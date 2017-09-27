@@ -1,0 +1,25 @@
+class stack:
+
+    def __init__(self):
+        self.items = []
+
+    def length(self):
+        return len(self.items)
+
+    def push(self,item ):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[len(self.items)-1]
+
+
+s = stack()
+
+print s.length()
+s.push("100")
+s.push("Hey")
+
+print s.peek()
