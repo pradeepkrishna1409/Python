@@ -1,0 +1,42 @@
+def quick_sort(arr):
+    print arr
+    quick_sort_2(arr,0,len(arr)-1)
+    print arr
+
+def quick_sort_2(arr,low,high):
+
+    if low < high:
+        partition=find_parttiion_pt(arr,low,high)
+
+        quick_sort_2(arr,low,partition-1)
+        quick_sort_2(arr,partition+1,high)
+
+
+def find_parttiion_pt(a,low,high):
+
+    done=False
+    pivot_val=a[low]
+    left_mk=low+1
+    right_m=high
+
+    while not done:
+        while left_mk <= right_m and a[left_mk]<=pivot_val:
+            left_mk+=1
+
+        while left_mk <= right_m and a[right_m]>=pivot_val:
+            right_m-=1
+
+        if left_mk > right_m:
+            done=True
+        else:
+            a[left_mk],a[right_m]= a[right_m], a[left_mk]
+
+
+    a[low],a[right_m]= a[right_m], a[low]
+
+    return right_m
+
+if __name__=="__main__":
+    arr=[67,23,14,56,78,99]
+    quick_sort(arr)
+
