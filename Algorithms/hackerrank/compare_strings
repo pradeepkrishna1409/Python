@@ -1,0 +1,32 @@
+import unittest
+
+
+
+def compare_strings(s1,s2):
+    hm_s1 = [0] * 26
+    hm_s2 = [0] * 26
+    s1 = "Hello"
+    s2 = "world"
+	
+    for i in range(len(s1)):
+        hm_s1[ord(s1[i]) - ord('a')] += 1
+	
+        hm_s2[ord(s2[i]) - ord('a')] += 1
+	
+
+	
+    for i in range(27):
+        if hm_s1[i] and hm_s2[i] and hm_s1[i] >= hm_s2[i]:
+            
+    return True
+
+
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertTrue(compare_strings)
+
+
+if __name__ == '__main__':
+    unittest.main()
