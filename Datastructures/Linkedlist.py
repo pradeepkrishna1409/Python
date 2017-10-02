@@ -16,15 +16,6 @@ class Linkedlist:
      curr.nxt=Node(item)
 
 
-  def print_lst(self):
-    curr=self.head
-    str1=""
-    while curr is not None:
-      str1 += "[ " + str(curr.val) + " ] --> "
-      curr=curr.nxt
-    print str1
-
-
   def remove(self,item):
       curr=self.head
       prev=None
