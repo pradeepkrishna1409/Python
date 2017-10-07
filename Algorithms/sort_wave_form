@@ -1,0 +1,15 @@
+def sort_wave_form(a):
+    for i in range(0, len(a), 2):
+
+        if i > 0 and a[i] < a[i - 1]:
+            a[i], a[i - 1] = a[i - 1], a[i]
+
+        if i < len(a) - 1 and a[i] < a[i + 1]:
+            a[i], a[i + 1] = a[i + 1], a[i]
+
+
+if __name__ == "__main__":
+    a = [5, 6, 7, 8, 9, 10, 1, 2, 3]
+
+    sort_wave_form(a)
+    print a
