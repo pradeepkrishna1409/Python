@@ -1,0 +1,22 @@
+def compress_output(string):
+    output = []
+    cnt = 1
+    prev_ch = string[0]
+
+    for ch in string[1:]:
+        if ch == prev_ch:
+            cnt += 1
+
+        else:
+            output.append(prev_ch + str(cnt))
+            cnt = 1
+
+        prev_ch = ch
+
+    output.append(prev_ch + str(cnt))
+
+    return ''.join(output)
+
+
+if __name__ == "__main__":
+    print compress_output('aaaadddeef')
