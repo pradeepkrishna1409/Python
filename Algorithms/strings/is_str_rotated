@@ -1,0 +1,23 @@
+def is_string_rotated_1(s1, s2):
+    return True if s2 in s1 + s1  else False
+
+
+def is_string_rotated_2(s1, s2):
+    for i in range(len(s1)):
+        substring = True
+
+        for j in range(len(s2)):
+            if s2[j] != s1[i + j]:
+                substring = False
+                break
+
+        if substring:
+            return True
+
+    return False
+
+
+if __name__ == "__main__":
+    s1 = 'hithere'
+    s2 = 'therehi'
+    print is_string_rotated_2(s1 + s1, s2)
