@@ -1,0 +1,40 @@
+def multipy(a, b):
+    if a < b:
+        s, l = a, b
+    else:
+        l, s = b, a
+
+    res = 0
+
+    for _ in range(abs(s)):
+        res += l
+
+    if s < 0:
+        return -res
+    else:
+        return res
+
+
+def divide(a, b):
+    if b == 0:
+        return None
+
+    temp = 0
+    cnt = 0
+
+    while abs(a) + 1 > temp + abs(b):
+        temp += abs(b)
+        cnt += 1
+
+    print int(a < 0) + int(b < 0)
+
+    if int(a < 0) + int(b < 0) == 1:
+        return -cnt
+    else:
+        return cnt
+
+
+if __name__ == "__main__":
+    a1 = [11, 22, 33, 44]
+    a2 = [77, 2, 66, 50]
+    print divide(-5, -3)
