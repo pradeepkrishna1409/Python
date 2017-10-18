@@ -1,0 +1,15 @@
+def replace_url(string):
+    output = []
+
+    for ch in string.strip():
+
+        if ch == " ":
+            output += '%20'
+        else:
+            output += ch
+
+    return ''.join(output)
+
+
+if __name__ == "__main__":
+    print replace_url('   Hi there!!!!')
